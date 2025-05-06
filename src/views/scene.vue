@@ -25,7 +25,7 @@
               <v-card
                 class="pa-3 h-full w-full flex justify-center content-center text-center"
                 :disabled="word.isDisabled"
-                :color="word.isDisabled ? 'green' : null"
+                :color="word.isDisabled ? 'green' : undefined"
                 :elevation="
                   (
                     word.isText
@@ -62,7 +62,7 @@
               <v-card
                 class="pa-3 h-full w-full flex justify-center content-center text-center"
                 :disabled="word.isDisabled"
-                :color="word.isDisabled ? 'green' : null"
+                :color="word.isDisabled ? 'green' : undefined"
                 :elevation="
                   (
                     word.isText
@@ -198,22 +198,23 @@ import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 
 import { useGameplayStore } from '@/stores/gameplay'
+import type { DisplayingWord, PlayerSelection } from '@/types/selection'
 
 const router = useRouter()
 const gameplay = useGameplayStore()
 
 const preparing = ref(true)
 
-const player1Words = ref([])
-const player2Words = ref([])
+const player1Words = ref<DisplayingWord[]>([])
+const player2Words = ref<DisplayingWord[]>([])
 
-const player1Selection = ref({})
-const player2Selection = ref({})
+const player1Selection = ref<PlayerSelection>({})
+const player2Selection = ref<PlayerSelection>({})
 
 const correctSfx = new Audio('/sfx/correct.mp3')
 const wrongSfx = new Audio('/sfx/wrong.mp3')
 
-function matchWord(player) {
+function matchWord(player: 'player1' | 'player2') {
   const selection = player === 'player1' ? player1Selection.value : player2Selection.value
   console.log(`[Gameplay] Matching word: ${selection.text} -> ${selection.translation}`)
   const originalWord = gameplay.words.filter((e) => e.text === selection.text)[0]
@@ -247,7 +248,7 @@ function matchWord(player) {
   clearSelection(player)
 }
 
-function selectWord(player, word) {
+function selectWord(player: 'player1' | 'player2', word: DisplayingWord) {
   const selection = player === 'player1' ? player1Selection : player2Selection
   if (word.isText) {
     if (selection.value.text === word.text) {
@@ -268,7 +269,7 @@ function selectWord(player, word) {
   }
 }
 
-function clearSelection(player) {
+function clearSelection(player: 'player1' | 'player2') {
   const selection = player === 'player1' ? player1Selection : player2Selection
   selection.value = {
     text: null,
@@ -304,7 +305,7 @@ onMounted(() => {
   // Shuffle the words for each player
   // Create two independent shuffled arrays with different random seeds
   // Create a promise-based shuffle with delay
-  const shuffleWithDelay = async (array, delay) => {
+  const shuffleWithDelay = async (array: DisplayingWord[], delay: number) => {
     await new Promise((resolve) => setTimeout(resolve, delay))
     const shuffled = [...array]
     for (let i = shuffled.length - 1; i > 0; i--) {

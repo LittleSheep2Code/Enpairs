@@ -74,14 +74,14 @@ import { useGameplayStore } from '@/stores/gameplay'
 const router = useRouter()
 const gameplay = useGameplayStore()
 
-const selectedWordbank = ref(null)
+const selectedWordbank = ref<string | null>(null)
 const loading = ref(false)
 
 const canStartGame = computed(() => {
   return selectedWordbank.value !== null
 })
 
-function selectWordbank(alias) {
+function selectWordbank(alias: string) {
   selectedWordbank.value = alias
 }
 
