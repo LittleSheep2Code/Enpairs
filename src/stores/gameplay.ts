@@ -1,8 +1,16 @@
 import type { WordEntry } from '@/types/wordbank'
 import { defineStore } from 'pinia'
-import { computed, ref } from 'vue'
+import { computed, reactive, ref } from 'vue'
+
+export interface GameplaySetting {
+  maxWords: number
+}
 
 export const useGameplayStore = defineStore('gameplay', () => {
+  const settings = reactive<GameplaySetting>({
+    maxWords: 20,
+  })
+
   const words = ref<WordEntry[]>([])
   const playerScores = ref<{ player1: number; player2: number }>({ player1: 0, player2: 0 })
   const playerMistakes = ref<{ player1: number; player2: number }>({ player1: 0, player2: 0 })
@@ -30,8 +38,20 @@ export const useGameplayStore = defineStore('gameplay', () => {
         throw new Error(`Failed to fetch words: ${response.statusText}`)
       }
       words.value = await response.json()
+      cropWords()
     } catch (error) {
       console.error('Error loading words:', error)
+    }
+  }
+
+  function cropWords() {
+    if (words.value.length > settings.maxWords) {
+      // Fisher-Yates shuffle algorithm
+      for (let i = words.value.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1))
+        ;[words.value[i], words.value[j]] = [words.value[j], words.value[i]]
+      }
+      words.value = words.value.slice(0, settings.maxWords)
     }
   }
 
@@ -103,12 +123,14 @@ export const useGameplayStore = defineStore('gameplay', () => {
     playerScores.value = { player1: 0, player2: 0 }
     playerMistakes.value = { player1: 0, player2: 0 }
     playerTimes.value = { player1: 0, player2: 0 }
+    isFinished.value = false
     stopTimer('player1')
     stopTimer('player2')
   }
 
   return {
     words,
+    settings,
     playerScores,
     playerMistakes,
     playerTimes,
@@ -124,6 +146,6 @@ export const useGameplayStore = defineStore('gameplay', () => {
     resetTimes,
     checkCompletion,
     finishGame,
-    resetGame
+    resetGame,
   }
 })
