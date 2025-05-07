@@ -5,8 +5,10 @@
       "name": "enpairs",
       "dependencies": {
         "@fontsource/roboto": "^5.2.5",
+        "@fontsource/roboto-mono": "^5.2.5",
         "@mdi/font": "^7.4.47",
         "@tailwindcss/vite": "^4.1.5",
+        "js-confetti": "^0.12.0",
         "pinia": "^3.0.1",
         "tailwindcss": "^4.1.5",
         "vue": "^3.5.13",
@@ -167,6 +169,8 @@
     "@eslint/plugin-kit": ["@eslint/plugin-kit@0.2.8", "", { "dependencies": { "@eslint/core": "^0.13.0", "levn": "^0.4.1" } }, "sha512-ZAoA40rNMPwSm+AeHpCq8STiNAwzWLJuP8Xv4CHIc9wv/PSuExjMrmjfYNj682vW0OOiZ1HKxzvjQr9XZIisQA=="],
 
     "@fontsource/roboto": ["@fontsource/roboto@5.2.5", "", {}, "sha512-70r2UZ0raqLn5W+sPeKhqlf8wGvUXFWlofaDlcbt/S3d06+17gXKr3VNqDODB0I1ASme3dGT5OJj9NABt7OTZQ=="],
+
+    "@fontsource/roboto-mono": ["@fontsource/roboto-mono@5.2.5", "", {}, "sha512-P1wrUBMFWfr+tuUIY10MzdRTBcl9f011CbZV1fXqcCk40Xmtn91l1V1daVuQ+JPctYEVYazabvaK+sUEThgnyw=="],
 
     "@humanfs/core": ["@humanfs/core@0.19.1", "", {}, "sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA=="],
 
@@ -625,6 +629,8 @@
     "isexe": ["isexe@3.1.1", "", {}, "sha512-LpB/54B+/2J5hqQ7imZHfdU31OlgQqx7ZicVlkm9kzg9/w8GKLEcFfJl/t7DCEDueOyBAD6zCCwTO6Fzs0NoEQ=="],
 
     "jiti": ["jiti@2.4.2", "", { "bin": { "jiti": "lib/jiti-cli.mjs" } }, "sha512-rg9zJN+G4n2nfJl5MW3BMygZX56zKPNVEYYqq7adpmMh4Jn2QNEwhvQlFy6jPVdcod7txZtKHWnyZiA3a0zP7A=="],
+
+    "js-confetti": ["js-confetti@0.12.0", "", {}, "sha512-1R0Akxn3Zn82pMqW65N1V2NwKkZJ75bvBN/VAb36Ya0YHwbaSiAJZVRr/19HBxH/O8x2x01UFAbYI18VqlDN6g=="],
 
     "js-tokens": ["js-tokens@4.0.0", "", {}, "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ=="],
 

@@ -12,78 +12,30 @@
     <div class="h-full overflow-hidden" v-else>
       <v-row class="h-full" no-gutters>
         <!-- Player 1 Side -->
-        <v-col cols="6" class="bg-blue-100 flex flex-col justify-center items-center px-4 pb-4">
-          <div class="text-center my-6 font-mono">
-            <p class="text-xl">{{ gameplay.playerScores['player1'] }} 分</p>
-            <p>
-              {{ gameplay.playerMistakes['player1'] }} 次错误 · 花费
-              {{ gameplay.playerTimes['player1'] }} 秒
-            </p>
-          </div>
-          <v-row cols="6" dense>
-            <v-col v-for="(word, index) in player1Words" :key="index" cols="3">
-              <v-card
-                class="pa-3 h-full w-full flex justify-center content-center text-center"
-                :disabled="word.isDisabled"
-                :color="word.isDisabled ? 'green' : undefined"
-                :elevation="
-                  (
-                    word.isText
-                      ? player1Selection.text === word.text
-                      : player1Selection.translation === word.translation
-                  )
-                    ? 20
-                    : 0
-                "
-                :border="
-                  !(word.isText
-                    ? player1Selection.text === word.text
-                    : player1Selection.translation === word.translation)
-                "
-                @click="selectWord('player1', word)"
-              >
-                <p>{{ word.isText ? word.text : word.translation }}</p>
-              </v-card>
-            </v-col>
-          </v-row>
-        </v-col>
+        <PlayerSide
+          player="player1"
+          bgColor="bg-blue-100"
+          :playerStatus="gameplay.playerStatus['player1']"
+          :playerScores="gameplay.playerScores['player1']"
+          :playerMistakes="gameplay.playerMistakes['player1']"
+          :playerTimes="gameplay.playerTimes['player1']"
+          :playerWords="player1Words"
+          :playerSelection="player1Selection"
+          :selectWord="(word) => selectWord('player1', word)"
+        />
 
         <!-- Player 2 Side -->
-        <v-col cols="6" class="bg-green-100 flex flex-col justify-center items-center px-4 pb-4">
-          <div class="text-center my-6 font-mono">
-            <p class="text-xl">{{ gameplay.playerScores['player2'] }} 分</p>
-            <p>
-              {{ gameplay.playerMistakes['player2'] }} 次错误 · 花费
-              {{ gameplay.playerTimes['player2'] }} 秒
-            </p>
-          </div>
-          <v-row cols="6" dense>
-            <v-col v-for="(word, index) in player2Words" :key="index" cols="3">
-              <v-card
-                class="pa-3 h-full w-full flex justify-center content-center text-center"
-                :disabled="word.isDisabled"
-                :color="word.isDisabled ? 'green' : undefined"
-                :elevation="
-                  (
-                    word.isText
-                      ? player2Selection.text === word.text
-                      : player2Selection.translation === word.translation
-                  )
-                    ? 20
-                    : 0
-                "
-                :border="
-                  !(word.isText
-                    ? player2Selection.text === word.text
-                    : player2Selection.translation === word.translation)
-                "
-                @click="selectWord('player2', word)"
-              >
-                <p>{{ word.isText ? word.text : word.translation }}</p>
-              </v-card>
-            </v-col>
-          </v-row>
-        </v-col>
+        <PlayerSide
+          player="player2"
+          bgColor="bg-green-100"
+          :playerStatus="gameplay.playerStatus['player2']"
+          :playerScores="gameplay.playerScores['player2']"
+          :playerMistakes="gameplay.playerMistakes['player2']"
+          :playerTimes="gameplay.playerTimes['player2']"
+          :playerWords="player2Words"
+          :playerSelection="player2Selection"
+          :selectWord="(word) => selectWord('player2', word)"
+        />
       </v-row>
     </div>
 
@@ -196,6 +148,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
+import PlayerSide from '@/components/PlayerSide.vue'
 
 import { useGameplayStore } from '@/stores/gameplay'
 import type { DisplayingWord, PlayerSelection } from '@/types/selection'

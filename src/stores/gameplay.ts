@@ -6,15 +6,21 @@ export interface GameplaySetting {
   maxWords: number
 }
 
+export type PlayerStatus = 'playing' | 'finished' | null
+
 export const useGameplayStore = defineStore('gameplay', () => {
   const settings = reactive<GameplaySetting>({
-    maxWords: 20,
+    maxWords: 10,
   })
 
   const words = ref<WordEntry[]>([])
   const playerScores = ref<{ player1: number; player2: number }>({ player1: 0, player2: 0 })
   const playerMistakes = ref<{ player1: number; player2: number }>({ player1: 0, player2: 0 })
   const playerTimes = ref<{ player1: number; player2: number }>({ player1: 0, player2: 0 })
+  const playerStatus = ref<{ player1: PlayerStatus; player2: PlayerStatus }>({
+    player1: null,
+    player2: null,
+  })
   let timerInterval1: number | null = null
   let timerInterval2: number | null = null
 
@@ -80,6 +86,7 @@ export const useGameplayStore = defineStore('gameplay', () => {
         playerTimes.value.player2 += 1
       }, 1000)
     }
+    playerStatus.value[player] = 'playing'
   }
 
   function stopTimer(player: 'player1' | 'player2') {
@@ -90,6 +97,7 @@ export const useGameplayStore = defineStore('gameplay', () => {
       clearInterval(timerInterval2)
       timerInterval2 = null
     }
+    playerStatus.value[player] = 'finished'
   }
 
   function resetTimes() {
@@ -123,6 +131,7 @@ export const useGameplayStore = defineStore('gameplay', () => {
     playerScores.value = { player1: 0, player2: 0 }
     playerMistakes.value = { player1: 0, player2: 0 }
     playerTimes.value = { player1: 0, player2: 0 }
+    playerStatus.value = { player1: null, player2: null }
     isFinished.value = false
     stopTimer('player1')
     stopTimer('player2')
@@ -137,6 +146,7 @@ export const useGameplayStore = defineStore('gameplay', () => {
     totalScore,
     isFinished,
     whoWins,
+    playerStatus,
     loadWords,
     addScore,
     addMistake,

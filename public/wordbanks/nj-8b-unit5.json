@@ -1,137 +1,137 @@
 [
-    {
-        "text": "endangered",
-        "asterisk": true,
-        "type": "adjective",
-        "translation": "濒危的"
-    },
-    {
-        "text": "file",
-        "type": "noun",
-        "translation": "文件"
-    },
-    {
-        "text": "giant panda",
-        "type": "short-term",
-        "translation": "大熊猫"
-    },
-    {
-        "text": "obligation",
-        "asterisk": true,
-        "type": "noun",
-        "translation": "义务"
-    },
-    {
-        "text": "wild",
-        "type": "adjective",
-        "translation": "野生的"
-    },
-    {
-        "text": "bamboo",
-        "type": "noun",
-        "translation": "竹子"
-    },
-    {
-        "text": "adult",
-        "type": "noun",
-        "translation": "成年人"
-    },
-    {
-        "text": "weight",
-        "type": "noun",
-        "translation": "重量"
-    },
-    {
-        "text": "kiligram",
-        "type": "noun",
-        "translation": "千克"
-    },
-    {
-        "text": "population",
-        "type": "noun",
-        "translation": "人口"
-    },
-    {
-        "text": "behaviour",
-        "type": "noun",
-        "translation": "行为"
-    },
-    {
-        "text": "birth",
-        "type": "noun",
-        "translation": "出生"
-    },
-    {
-        "text": "patch",
-        "asterisk": true,
-        "type": "noun",
-        "translation": "补丁"
-    },
-    {
-        "text": "shoulder",
-        "type": "noun",
-        "translation": "肩膀"
-    },
-    {
-        "text": "central",
-        "type": "adjective",
-        "translation": "中心的"
-    },
-    {
-        "text": "fur",
-        "type": "noun",
-        "translation": "毛皮"
-    },
-    {
-        "text": "curel",
-        "type": "adjective",
-        "translation": "残忍的"
-    },
-    {
-        "text": "organization",
-        "type": "noun",
-        "translation": "组织"
-    },
-    {
-        "text": "danger",
-        "type": "noun",
-        "translation": "危险"
-    },
-    {
-        "text": "face",
-        "type": "noun",
-        "translation": "脸"
-    },
-    {
-        "text": "Asian",
-        "type": "adjective",
-        "translation": "亚洲的"
-    },
-    {
-        "text": "weigh",
-        "type": "verb",
-        "translation": "称重"
-    },
-    {
-        "text": "in the wild",
-        "type": "short-term",
-        "translation": "在野外"
-    },
-    {
-        "text": "at birth",
-        "asterisk": true,
-        "type": "short-term",
-        "translation": "在出生时"
-    },
-    {
-        "text": "on one's own",
-        "type": "short-term",
-        "translation": "独自"
-    },
-    {
-        "text": "close to",
-        "asterisk": true,
-        "type": "short-term",
-        "translation": "接近"
-    }
+  {
+    "text": "endangered",
+    "asterisk": true,
+    "type": "adjective",
+    "translation": "濒危的"
+  },
+  {
+    "text": "file",
+    "type": "noun",
+    "translation": "文件"
+  },
+  {
+    "text": "giant panda",
+    "type": "short-term",
+    "translation": "大熊猫"
+  },
+  {
+    "text": "obligation",
+    "asterisk": true,
+    "type": "noun",
+    "translation": "义务"
+  },
+  {
+    "text": "wild",
+    "type": "adjective",
+    "translation": "野生的"
+  },
+  {
+    "text": "bamboo",
+    "type": "noun",
+    "translation": "竹子"
+  },
+  {
+    "text": "adult",
+    "type": "noun",
+    "translation": "成年人"
+  },
+  {
+    "text": "weight",
+    "type": "noun",
+    "translation": "重量"
+  },
+  {
+    "text": "kilogram",
+    "type": "noun",
+    "translation": "千克"
+  },
+  {
+    "text": "population",
+    "type": "noun",
+    "translation": "人口"
+  },
+  {
+    "text": "behaviour",
+    "type": "noun",
+    "translation": "行为"
+  },
+  {
+    "text": "birth",
+    "type": "noun",
+    "translation": "出生"
+  },
+  {
+    "text": "patch",
+    "asterisk": true,
+    "type": "noun",
+    "translation": "补丁；色斑"
+  },
+  {
+    "text": "shoulder",
+    "type": "noun",
+    "translation": "肩膀"
+  },
+  {
+    "text": "central",
+    "type": "adjective",
+    "translation": "中心的"
+  },
+  {
+    "text": "fur",
+    "type": "noun",
+    "translation": "毛皮"
+  },
+  {
+    "text": "curel",
+    "type": "adjective",
+    "translation": "残忍的"
+  },
+  {
+    "text": "organization",
+    "type": "noun",
+    "translation": "组织"
+  },
+  {
+    "text": "danger",
+    "type": "noun",
+    "translation": "危险"
+  },
+  {
+    "text": "face",
+    "type": "noun",
+    "translation": "脸"
+  },
+  {
+    "text": "Asian",
+    "type": "adjective",
+    "translation": "亚洲的"
+  },
+  {
+    "text": "weigh",
+    "type": "verb",
+    "translation": "称重"
+  },
+  {
+    "text": "in the wild",
+    "type": "short-term",
+    "translation": "在野外"
+  },
+  {
+    "text": "at birth",
+    "asterisk": true,
+    "type": "short-term",
+    "translation": "在出生时"
+  },
+  {
+    "text": "on one's own",
+    "type": "short-term",
+    "translation": "独自"
+  },
+  {
+    "text": "close to",
+    "asterisk": true,
+    "type": "short-term",
+    "translation": "接近"
+  }
 ]

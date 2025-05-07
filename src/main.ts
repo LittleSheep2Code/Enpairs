@@ -1,6 +1,9 @@
 import './assets/main.css'
+
 import '@mdi/font/css/materialdesignicons.css'
+
 import '@fontsource/roboto/500.css'
+import '@fontsource/roboto-mono/500.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
@@ -23,8 +26,8 @@ const vuetify = createVuetify({
   icons: {
     defaultSet: 'mdi',
     aliases,
-    sets: { mdi }
-  }
+    sets: { mdi },
+  },
 })
 
 app.use(createPinia())

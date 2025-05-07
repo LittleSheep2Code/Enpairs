@@ -1,127 +1,127 @@
 [
-    {
-        "text": "cartoon",
-        "type": "noun",
-        "translation": "卡通"
-    },
-    {
-        "text": "warning",
-        "type": "noun",
-        "translation": "警告"
-    },
-    {
-        "text": "role-play",
-        "type": "noun",
-        "translation": "角色扮演"
-    },
-    {
-        "text": "symbol",
-        "type": "noun",
-        "translation": "符号"
-    },
-    {
-        "text": "bubble",
-        "asterisk": true,
-        "type": "noun",
-        "translation": "气泡"
-    },
-    {
-        "text": "thought",
-        "type": "noun",
-        "translation": "思想"
-    },
-    {
-        "text": "rough",
-        "asterisk": true,
-        "type": "adjective",
-        "translation": "粗糙的"
-    },
-    {
-        "text": "sketch",
-        "asterisk": true,
-        "type": "noun",
-        "translation": "素描"
-    },
-    {
-        "text": "program",
-        "type": "noun",
-        "translation": "程序"
-    },
-    {
-        "text": "record",
-        "type": "noun",
-        "translation": "记录"
-    },
-    {
-        "text": "effect",
-        "asterisk": true,
-        "type": "noun",
-        "translation": "效果"
-    },
-    {
-        "text": "basic",
-        "type": "adjective",
-        "translation": "基本的"
-    },
-    {
-        "text": "stage",
-        "type": "noun",
-        "translation": "舞台"
-    },
-    {
-        "text": "pleasant",
-        "type": "adjective", 
-        "translation": "愉快的"
-    },
-    {
-        "text": "detailed",
-        "asterisk": true,
-        "type": "adjective",
-        "translation": "详细的"
-    },
-    {
-        "text": "appear",
-        "type": "verb",
-        "translation": "出现"
-    },
-    {
-        "text": "actor",
-        "type": "noun",
-        "translation": "演员"
-    },
-    {
-        "text": "match",
-        "type": "verb",
-        "translation": "匹配"
-    },
-    {
-        "text": "separately",
-        "type": "adverb",
-        "translation": "分别地"
-    },
-    {
-        "text": "play",
-        "type": "verb",
-        "translation": "玩；演奏"
-    },
-    {
-        "text": "score",
-        "type": "noun",
-        "translation": "分数"
-    },
-    {
-        "text": "star",
-        "type": "noun",
-        "translation": "星星"
-    },
-    {
-        "text": "team",
-        "type": "noun",
-        "translation": "团队"
-    },
-    {
-        "text": "island",
-        "type": "noun",
-        "translation": "岛屿"
-    }
+  {
+    "text": "cartoon",
+    "type": "noun",
+    "translation": "卡通"
+  },
+  {
+    "text": "warning",
+    "type": "noun",
+    "translation": "警告"
+  },
+  {
+    "text": "role-play",
+    "type": "noun",
+    "translation": "角色扮演"
+  },
+  {
+    "text": "symbol",
+    "type": "noun",
+    "translation": "符号"
+  },
+  {
+    "text": "bubble",
+    "asterisk": true,
+    "type": "noun",
+    "translation": "气泡"
+  },
+  {
+    "text": "thought",
+    "type": "noun",
+    "translation": "思想"
+  },
+  {
+    "text": "rough",
+    "asterisk": true,
+    "type": "adjective",
+    "translation": "粗糙的"
+  },
+  {
+    "text": "sketch",
+    "asterisk": true,
+    "type": "noun",
+    "translation": "素描"
+  },
+  {
+    "text": "program",
+    "type": "noun",
+    "translation": "程序"
+  },
+  {
+    "text": "record",
+    "type": "noun",
+    "translation": "记录"
+  },
+  {
+    "text": "effect",
+    "asterisk": true,
+    "type": "noun",
+    "translation": "效果"
+  },
+  {
+    "text": "basic",
+    "type": "adjective",
+    "translation": "基本的"
+  },
+  {
+    "text": "stage",
+    "type": "noun",
+    "translation": "舞台"
+  },
+  {
+    "text": "pleasant",
+    "type": "adjective",
+    "translation": "愉快的"
+  },
+  {
+    "text": "detailed",
+    "asterisk": true,
+    "type": "adjective",
+    "translation": "详细的"
+  },
+  {
+    "text": "appear",
+    "type": "verb",
+    "translation": "出现"
+  },
+  {
+    "text": "actor",
+    "type": "noun",
+    "translation": "演员"
+  },
+  {
+    "text": "match",
+    "type": "verb",
+    "translation": "匹配"
+  },
+  {
+    "text": "separately",
+    "type": "adverb",
+    "translation": "分别地"
+  },
+  {
+    "text": "play",
+    "type": "verb",
+    "translation": "玩；演奏"
+  },
+  {
+    "text": "score",
+    "type": "noun",
+    "translation": "分数"
+  },
+  {
+    "text": "star",
+    "type": "noun",
+    "translation": "星星"
+  },
+  {
+    "text": "team",
+    "type": "noun",
+    "translation": "团队"
+  },
+  {
+    "text": "island",
+    "type": "noun",
+    "translation": "岛屿"
+  }
 ]
